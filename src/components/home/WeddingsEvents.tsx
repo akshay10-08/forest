@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 export function WeddingsEvents() {
   return (
     <section className="py-24 md:py-32 bg-[var(--color-ivory)]">
-      <div className="max-w-[1240px] mx-auto px-6">
+      <div className="max-w-[1024px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           <motion.div 

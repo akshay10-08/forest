@@ -6,6 +6,7 @@ import { PoolFeatureBand } from "@/components/home/PoolFeatureBand";
 import { WeddingsEvents } from "@/components/home/WeddingsEvents";
 import { OccasionTiles } from "@/components/home/OccasionTiles";
 import { MarqueeRibbon } from "@/components/home/MarqueeRibbon";
+import { ResortReels } from "@/components/home/ResortReels";
 import { AmenitiesGrid } from "@/components/home/AmenitiesGrid";
 import { Experiences } from "@/components/home/Experiences";
 import { DiningTeaser } from "@/components/home/DiningTeaser";
@@ -106,7 +107,7 @@ export default function Home() {
       <WeddingsEvents />
       <OccasionTiles />
       <MarqueeRibbon />
-      
+      <ResortReels />
       <AmenitiesGrid />
       <Experiences />
       <DiningTeaser />

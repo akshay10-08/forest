@@ -55,7 +55,7 @@ export function GalleryOrbit() {
 
         {/* Desktop Orbit / Mobile Carousel */}
         {!isMobile ? (
-          <div className="relative w-full max-w-[720px] aspect-square mx-auto flex items-center justify-center group/orbit">
+          <div className="relative w-full max-w-[580px] aspect-square mx-auto flex items-center justify-center group/orbit">
             
             {/* Custom CSS for rotation */}
             <style dangerouslySetInnerHTML={{__html: `
@@ -99,13 +99,13 @@ export function GalleryOrbit() {
                   // Calculate position on a circle. 
                   // 50% is center. Radius is ~40% to fit within the container.
                   const radius = 42; 
-                  const left = `calc(50% + ${Math.cos(angle) * radius}% - 70px)`;
-                  const top = `calc(50% + ${Math.sin(angle) * radius}% - 70px)`;
+                  const left = `calc(50% + ${Math.cos(angle) * radius}% - 55px)`;
+                  const top = `calc(50% + ${Math.sin(angle) * radius}% - 55px)`;
                   
                   return (
                     <div 
                       key={`slot-${i}`} 
-                      className="absolute w-[140px] h-[140px]"
+                      className="absolute w-[110px] h-[110px]"
                       style={{ left, top }}
                     >
                       <div className="w-full h-full animate-counter-orbit">
@@ -134,7 +134,7 @@ export function GalleryOrbit() {
             </div>
 
             {/* Center Featured Image */}
-            <div className="relative z-20 w-[360px] h-[360px] rounded-full p-2 border border-[var(--color-gold)]/50 shadow-[0_0_40px_rgba(194,162,78,0.15)] bg-[var(--color-forest)]/50 backdrop-blur-md">
+            <div className="relative z-20 w-[280px] h-[280px] rounded-full p-2 border border-[var(--color-gold)]/50 shadow-[0_0_40px_rgba(194,162,78,0.15)] bg-[var(--color-forest)]/50 backdrop-blur-md">
               <div className="w-full h-full rounded-full overflow-hidden relative" style={{ transform: "translateZ(0)", willChange: "transform" }}>
                 <AnimatePresence mode="popLayout">
                   {centerImage && (
@@ -161,7 +161,7 @@ export function GalleryOrbit() {
         ) : (
           /* Mobile Fallback Layout */
           <div className="w-full flex flex-col items-center gap-8">
-            <div className="w-full max-w-[320px] aspect-square rounded-full p-2 border border-[var(--color-gold)]/50 shadow-[0_0_40px_rgba(194,162,78,0.15)] bg-[var(--color-forest)]/50 backdrop-blur-md">
+            <div className="w-full max-w-[260px] aspect-square rounded-full p-2 border border-[var(--color-gold)]/50 shadow-[0_0_40px_rgba(194,162,78,0.15)] bg-[var(--color-forest)]/50 backdrop-blur-md">
               <div className="w-full h-full rounded-full overflow-hidden relative">
                 <AnimatePresence mode="popLayout">
                   {centerImage && (
@@ -192,7 +192,7 @@ export function GalleryOrbit() {
                       key={imageId}
                       layoutId={imageId}
                       onClick={() => handleSwap(i, imageId)}
-                      className="w-[80px] h-[80px] flex-shrink-0 rounded-full overflow-hidden border border-[var(--color-gold)]/40 shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
+                      className="w-[64px] h-[64px] flex-shrink-0 rounded-full overflow-hidden border border-[var(--color-gold)]/40 shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
                     >
                       <img 
                         src={images.find(img => img.id === imageId)?.src} 

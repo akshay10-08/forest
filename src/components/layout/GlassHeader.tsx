@@ -50,7 +50,7 @@ export function GlassHeader() {
                 key={link.label}
                 href={link.href}
                 className={clsx(
-                  "uppercase text-sm tracking-[0.12em] transition-colors relative group",
+                  "uppercase text-base tracking-[0.12em] transition-colors relative group",
                   isScrolled ? "text-[var(--color-charcoal)] hover:text-[var(--color-gold)]" : "text-[var(--color-ivory)] hover:text-[var(--color-gold)]"
                 )}
               >
@@ -66,7 +66,7 @@ export function GlassHeader() {
               type="button"
               onClick={() => openWhatsApp(`Hello Royal Forest Resort,\n\nI'd like to enquire about your venue.\n\nName: \nDate: \nGuests: \n\nThank you.`)}
               className={clsx(
-                "uppercase text-xs tracking-widest px-4 py-2 rounded-full border transition-colors",
+                "uppercase text-sm tracking-widest px-4 py-2 rounded-full border transition-colors",
                 isScrolled 
                   ? "border-[var(--color-forest)]/20 text-[var(--color-forest)] hover:bg-[var(--color-forest)]/5" 
                   : "border-[var(--color-ivory)]/40 text-[var(--color-ivory)] hover:bg-white/10"
@@ -76,7 +76,7 @@ export function GlassHeader() {
             <button 
               type="button"
               onClick={() => openWhatsApp(`Hello Royal Forest Resort,\n\nI'd like to book a stay.\n\nName: \nCheck-in: \nCheck-out: \nGuests: \nCottage preference: \n\nThank you.`)}
-              className="uppercase text-xs tracking-widest px-5 py-2.5 rounded-full bg-[var(--color-gold)] text-white hover:bg-[var(--color-gold-soft)] hover:text-[var(--color-forest)] transition-colors shadow-md">
+              className="uppercase text-sm tracking-widest px-5 py-2.5 rounded-full bg-[var(--color-gold)] text-white hover:bg-[var(--color-gold-soft)] hover:text-[var(--color-forest)] transition-colors shadow-md">
               Book a Stay
             </button>
           </div>

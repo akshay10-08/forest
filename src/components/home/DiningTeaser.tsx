@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export function DiningTeaser() {
   return (
-    <section className="py-24 bg-[var(--color-ivory)]">
-      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="py-24 md:py-32 bg-[var(--color-charcoal)] text-white relative overflow-hidden">
+      <div className="max-w-[1024px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div 
           className="order-1"
           initial={{ opacity: 0, x: -30 }}

@@ -13,8 +13,8 @@ export function OccasionTiles() {
   ];
 
   return (
-    <section className="pb-24 bg-[var(--color-ivory)]">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <section className="py-24 bg-[var(--color-cream)]">
+      <div className="max-w-[1024px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {occasions.map((occ, idx) => (
             <motion.div

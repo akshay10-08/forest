@@ -42,7 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${cormorant.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--color-gold)] selection:text-[var(--color-forest)]">
+      <body className="min-h-full flex flex-col font-sans bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--color-gold)] selection:text-[var(--color-forest)] overflow-x-hidden">
         <SmoothScrollProvider>
           <GlassHeader />
           <main className="flex-grow">{children}</main>

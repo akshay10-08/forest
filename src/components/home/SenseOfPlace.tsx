@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function SenseOfPlace() {
   return (
-    <section className="py-24 md:py-32 max-w-[1240px] mx-auto px-6 overflow-hidden bg-[var(--color-ivory)]">
+    <section className="py-24 md:py-32 max-w-[1024px] mx-auto px-6 overflow-hidden bg-[var(--color-ivory)]">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center">
         <motion.div 
           className="col-span-1 md:col-span-6 relative"

@@ -29,7 +29,7 @@ export function CottagesShowcase() {
 
   return (
     <section className="py-24 bg-[var(--color-cream)]">
-      <div className="max-w-[1240px] mx-auto px-6">
+      <div className="max-w-[1024px] mx-auto px-6">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <motion.div 
