@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function DiningTeaser() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-charcoal)] text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[var(--color-ivory)] relative overflow-hidden">
       <div className="max-w-[1024px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div 
           className="order-1"

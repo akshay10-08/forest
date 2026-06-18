@@ -121,10 +121,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <button className="w-full sm:w-auto uppercase text-xs md:text-sm tracking-widest px-8 py-3.5 rounded-full bg-[var(--color-gold)] text-white hover:bg-[var(--color-gold-soft)] hover:text-[var(--color-forest)] transition-all shadow-lg font-medium">
+          <button 
+            onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto uppercase text-xs md:text-sm tracking-widest px-8 py-3.5 rounded-full bg-[var(--color-gold)] text-white hover:bg-[var(--color-gold-soft)] hover:text-[var(--color-forest)] transition-all shadow-lg font-medium">
             Plan Your Event
           </button>
-          <button className="w-full sm:w-auto uppercase text-xs md:text-sm tracking-widest px-8 py-3.5 rounded-full border border-[var(--color-ivory)]/40 text-[var(--color-ivory)] hover:bg-white/10 transition-all backdrop-blur-sm">
+          <button 
+            onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto uppercase text-xs md:text-sm tracking-widest px-8 py-3.5 rounded-full border border-[var(--color-ivory)]/40 text-[var(--color-ivory)] hover:bg-white/10 transition-all backdrop-blur-sm">
             Book a Stay
           </button>
         </motion.div>

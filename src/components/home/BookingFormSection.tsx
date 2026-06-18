@@ -57,7 +57,7 @@ export function BookingFormSection() {
 
 
   return (
-    <section className="w-full bg-[var(--color-cream)] py-20 px-6">
+    <section id="booking-form" className="w-full bg-[var(--color-cream)] py-20 px-6">
       <div className="max-w-[1240px] mx-auto">
         <div className="bg-[var(--color-cream)] rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border border-[var(--color-gold)]/20">
           
@@ -257,13 +257,6 @@ export function BookingFormSection() {
                 <span className="text-sm pl-7 opacity-90">Open 24x7 · Venue tours by appointment</span>
               </div>
 
-              <div className="flex flex-col space-y-1">
-                <div className="flex items-center space-x-3 text-[var(--color-gold)] opacity-90">
-                  <MapPin size={16} />
-                  <span className="text-xs uppercase tracking-widest font-semibold">Landmark</span>
-                </div>
-                <span className="text-sm pl-7 opacity-90">Near Vaishno Mata Mandir, Bajrang Chauraha</span>
-              </div>
 
             </div>
 

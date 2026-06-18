@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { openWhatsApp } from "@/lib/whatsapp";
@@ -19,10 +20,14 @@ export function GlassHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 80);
   });
+
+  const isHomePage = pathname === "/";
+  const effectiveScrolled = isScrolled || !isHomePage;
 
   return (
     <>
@@ -30,7 +35,7 @@ export function GlassHeader() {
         className={clsx(
           "fixed top-4 left-4 right-4 z-50 max-w-[1240px] mx-auto rounded-full transition-all duration-300",
           "before:content-[''] before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
-          isScrolled
+          effectiveScrolled
             ? "bg-[var(--color-ivory)]/90 backdrop-blur-xl shadow-lg py-2 px-6 before:bg-gradient-to-b before:from-white/40 before:to-transparent border border-black/5"
             : "bg-white/10 backdrop-blur-xl backdrop-saturate-150 shadow-[0_8px_32px_rgba(16,48,31,0.18)] py-3 px-6 before:bg-gradient-to-b before:from-white/25 before:to-transparent border border-white/20"
         )}
@@ -40,7 +45,7 @@ export function GlassHeader() {
       >
         <div className="flex items-center justify-between relative z-10">
           <Link href="/" className="flex-shrink-0">
-            <Wordmark isScrolled={isScrolled} />
+            <Wordmark isScrolled={effectiveScrolled} />
           </Link>
 
           {/* Desktop Nav */}
@@ -51,7 +56,7 @@ export function GlassHeader() {
                 href={link.href}
                 className={clsx(
                   "uppercase text-base tracking-[0.12em] transition-colors relative group",
-                  isScrolled ? "text-[var(--color-charcoal)] hover:text-[var(--color-gold)]" : "text-[var(--color-ivory)] hover:text-[var(--color-gold)]"
+                  effectiveScrolled ? "text-[var(--color-charcoal)] hover:text-[var(--color-gold)]" : "text-[var(--color-ivory)] hover:text-[var(--color-gold)]"
                 )}
               >
                 {link.label}
@@ -67,7 +72,7 @@ export function GlassHeader() {
               onClick={() => openWhatsApp(`Hello Royal Forest Resort,\n\nI'd like to enquire about your venue.\n\nName: \nDate: \nGuests: \n\nThank you.`)}
               className={clsx(
                 "uppercase text-sm tracking-widest px-4 py-2 rounded-full border transition-colors",
-                isScrolled 
+                effectiveScrolled 
                   ? "border-[var(--color-forest)]/20 text-[var(--color-forest)] hover:bg-[var(--color-forest)]/5" 
                   : "border-[var(--color-ivory)]/40 text-[var(--color-ivory)] hover:bg-white/10"
               )}>
@@ -87,7 +92,7 @@ export function GlassHeader() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={clsx(
                 "p-2 rounded-full",
-                isScrolled ? "text-[var(--color-forest)]" : "text-[var(--color-ivory)]"
+                effectiveScrolled ? "text-[var(--color-forest)]" : "text-[var(--color-ivory)]"
               )}
               aria-label="Toggle Menu"
             >
